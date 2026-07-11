@@ -2,7 +2,7 @@ export const siteConfig = {
   brand: { name: "ElvaMind", tagline: "Practical AI systems for better business operations.", descriptor: "AI Automation, Agents & Custom Software", domain: "https://elvamind.com" },
   founder: { name: "Arun Jaiswal", title: "Founder & AI Automation Consultant", experience: "9+ years of software engineering experience", bio: "Arun Jaiswal is a software engineer with over nine years of experience building enterprise applications, integrations, and digital solutions. Through ElvaMind, he helps businesses automate repetitive work, connect disconnected systems, and build practical AI-powered solutions that improve efficiency and support growth. His approach combines strong software-engineering practices with modern AI, automation, and cloud technologies to deliver reliable systems that are built for real business use.", photo: "/images/founder.jpg", linkedin: "YOUR_LINKEDIN_URL" },
   contact: { email: "arunjaiswal139@gmail.com", phone: "+919012955994", whatsappNumber: "+919012955994", location: "India" },
-  social: { linkedin: "YOUR_LINKEDIN_URL", instagram: "YOUR_INSTAGRAM_URL", youtube: "YOUR_YOUTUBE_URL" },
+  social: { linkedin: "https://www.linkedin.com/in/arun-jaiswal-5a8705108/", instagram: "YOUR_INSTAGRAM_URL", youtube: "YOUR_YOUTUBE_URL" },
   form: { endpoint: "https://script.google.com/macros/s/AKfycbxX9Qp8n35HRADar9iRTdF5AemEtqLTn5NDnl3J65gee0gTf8KlggUhYnie_V_WzOUKQw/exec" },
   analytics: { gaMeasurementId: "" },
   media: { workflow: "/images/workflow-email-automation.png", telegram: "/images/telegram-output.png.png" },

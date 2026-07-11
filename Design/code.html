@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ElvaMind | AI Workflow Automation for Modern Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#004e5c",
+                      "on-primary-container": "#dad7ff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#e2dfff",
+                      "surface-variant": "#e0e3e5",
+                      "on-surface": "#191c1e",
+                      "surface-bright": "#f7f9fb",
+                      "violet-accent": "#7C3AED",
+                      "on-primary-fixed": "#0f0069",
+                      "error-container": "#ffdad6",
+                      "background": "#f7f9fb",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#001f26",
+                      "on-surface-variant": "#464555",
+                      "surface-border": "#E2E8F0",
+                      "secondary": "#00687a",
+                      "tertiary-container": "#6f3dd9",
+                      "secondary-fixed-dim": "#4cd7f6",
+                      "primary-container": "#4f46e5",
+                      "surface-dim": "#d8dadc",
+                      "secondary-fixed": "#acedff",
+                      "off-white": "#F8FAFC",
+                      "tertiary-fixed-dim": "#d0bcff",
+                      "dark-navy": "#0A192F",
+                      "error": "#ba1a1a",
+                      "on-background": "#191c1e",
+                      "tertiary-fixed": "#e9ddff",
+                      "surface": "#f7f9fb",
+                      "on-error-container": "#93000a",
+                      "inverse-surface": "#2d3133",
+                      "on-tertiary-fixed": "#23005c",
+                      "light-grey": "#F1F5F9",
+                      "inverse-primary": "#c3c0ff",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "secondary-container": "#57dffe",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "outline": "#777587",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#571ac0",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#e6e8ea",
+                      "outline-variant": "#c7c4d8",
+                      "on-tertiary-fixed-variant": "#5516be",
+                      "primary": "#3525cd",
+                      "on-tertiary-container": "#e3d5ff",
+                      "on-secondary-container": "#006172",
+                      "surface-tint": "#4d44e3",
+                      "surface-container-highest": "#e0e3e5",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface-container-low": "#f2f4f6",
+                      "surface-container": "#eceef0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "section-padding-mobile": "64px",
+                      "section-padding-desktop": "120px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "label-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "display-lg-mobile": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .hero-gradient-text {
+            background: linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .workflow-line {
+            background: linear-gradient(90deg, rgba(79, 70, 229, 0) 0%, rgba(79, 70, 229, 1) 50%, rgba(79, 70, 229, 0) 100%);
+            height: 1px;
+            width: 100%;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-link {
+            color: #3525cd;
+            font-weight: 700;
+            border-bottom: 2px solid #3525cd;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Header Navigation -->
+<header class="fixed w-full top-0 z-50 bg-dark-navy/80 backdrop-blur-md border-b border-surface-border/10 shadow-sm h-20">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter h-full">
+<a class="flex items-center gap-2" href="#">
+<img alt="ElvaMind Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp_hgRQJZifkDAAxCchl2tIHFYJoNKhXiqsCSCSNRhaQI_jzOQBFDvZS4jN88-ppR3447BJy1U60rxJv3naeWfV-XNwl7Ab8WU_NRpxQq62lhK2P2EfjYH-BU9o9ehI_w1Z8C-dB_ZfCt-Xv_k_vuOLdHNjHdmmjZkBJxZE244Nbixg3TrR1cU3DFp01UJHCZu166z9fUC39oVgvQS7TjYCbcDxlEV8gFCX_OBMvR4a6JAVL_CajwD9gTeh8U8oj96qCxDNkGfp2HZ"/>
+<span class="font-display-lg text-headline-md font-bold text-on-primary">ElvaMind</span>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-surface-variant hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-md text-label-md text-surface-variant hover:text-primary transition-colors duration-200" href="#solutions">Solutions</a>
+<a class="font-label-md text-label-md text-surface-variant hover:text-primary transition-colors duration-200" href="#work">Work</a>
+<a class="font-label-md text-label-md text-surface-variant hover:text-primary transition-colors duration-200" href="#process">Process</a>
+<a class="font-label-md text-label-md text-surface-variant hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="font-label-md text-label-md text-surface-variant hover:text-primary transition-colors duration-200" href="#contact">Contact</a>
+</div>
+<a class="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all" href="#audit">Book a Free Audit</a>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 bg-dark-navy overflow-hidden">
+
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center py-section-padding-mobile md:py-section-padding-desktop">
+<div class="space-y-stack-md">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary-fixed text-label-sm font-label-md">Next-Gen Business Operations</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary leading-tight">
+                    AI systems that make your business <span class="hero-gradient-text">work smarter.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl opacity-90">
+                    We bridge the gap between complex AI automation and human-centric workflows. ElvaMind helps enterprises automate repetitive tasks and connect disconnected tools into a single, intelligent ecosystem.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-gradient-to-r from-[#06B6D4] to-[#8B5CF6] text-on-primary px-8 py-4 rounded-xl font-label-md text-center hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all active:scale-95" href="#audit">
+                        Book a Free Automation Audit
+                    </a>
+<a class="border-[1.5px] border-surface-variant/30 text-on-primary px-8 py-4 rounded-xl font-label-md text-center hover:bg-white/5 transition-all active:scale-95" href="#solutions">
+                        Explore Solutions
+                    </a>
+</div>
+</div>
+<div class="hidden lg:flex justify-center items-center relative">
+<!-- Workflow Diagram Visualization -->
+<div class="relative w-full max-w-md aspect-square flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="grid grid-cols-3 gap-8 relative">
+<!-- Node 1: Gmail -->
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary/50 transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined text-on-primary text-3xl">mail</span>
+</div>
+<span class="text-label-sm text-surface-variant">Incoming Email</span>
+</div>
+<!-- Connectors & AI Center -->
+<div class="flex flex-col items-center justify-center">
+<div class="w-24 h-24 rounded-full bg-gradient-to-tr from-primary to-violet-accent flex items-center justify-center shadow-2xl relative">
+<span class="material-symbols-outlined text-white text-4xl animate-pulse">psychology</span>
+<!-- Orbiting Elements -->
+<div class="absolute inset-0 border border-white/20 rounded-full scale-150 animate-[spin_10s_linear_infinite]"></div>
+</div>
+</div>
+<!-- Node 2: CRM -->
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary/50 transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined text-on-primary text-3xl">hub</span>
+</div>
+<span class="text-label-sm text-surface-variant">CRM / Telegram</span>
+</div>
+</div>
+<!-- Decorative Paths -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-30" viewbox="0 0 400 400">
+<path d="M100 200 Q 200 200 200 200" fill="none" stroke="white" stroke-dasharray="4 4" stroke-width="2"></path>
+<path d="M200 200 Q 300 200 300 200" fill="none" stroke="white" stroke-dasharray="4 4" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- Business Problems Section -->
+<section class="bg-light-grey py-section-padding-mobile md:py-section-padding-desktop">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Your team should not waste time on repetitive work.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Manual operations are the hidden tax on your business growth. We help you eliminate them.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Problem Cards -->
+<div class="bg-white p-stack-lg rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-error-container/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-error-container/40 transition-colors">
+<span class="material-symbols-outlined text-error">dataset</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Manual Data Entry</h3>
+<p class="text-on-surface-variant">Spending hours copying data between spreadsheets and tools that don't talk to each other.</p>
+</div>
+<div class="bg-white p-stack-lg rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-error-container/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-error-container/40 transition-colors">
+<span class="material-symbols-outlined text-error">notification_important</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Missed Leads</h3>
+<p class="text-on-surface-variant">Potential clients falling through the cracks because response times are slow or follow-ups are manual.</p>
+</div>
+<div class="bg-white p-stack-lg rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-error-container/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-error-container/40 transition-colors">
+<span class="material-symbols-outlined text-error">link_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Disconnected Tools</h3>
+<p class="text-on-surface-variant">A fragmented tech stack where no one has a "single source of truth" for business operations.</p>
+</div>
+<div class="bg-white p-stack-lg rounded-xl border border-surface-border shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-error-container/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-error-container/40 transition-colors">
+<span class="material-symbols-outlined text-error">pending_actions</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Repetitive Decisions</h3>
+<p class="text-on-surface-variant">Managers spending time on basic triage and simple logic that could be handled by AI 24/7.</p>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-white" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="text-primary font-label-md uppercase tracking-widest text-label-sm">Our Capabilities</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mt-2">What we build</h2>
+</div>
+<p class="font-body-lg text-on-surface-variant max-w-md">End-to-end automation solutions tailored for enterprise reliability and scale.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="group relative bg-off-white rounded-2xl p-stack-lg border border-surface-border overflow-hidden hover:border-primary/50 transition-all duration-300">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-16 translate-x-16 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block">alt_route</span>
+<h3 class="font-headline-md text-headline-md mb-4">AI Workflow Automation</h3>
+<p class="text-on-surface-variant mb-6">Connect your entire tech stack with intelligent triggers and actions that eliminate manual handovers.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">n8n</span>
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">Make</span>
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">Zapier</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group relative bg-off-white rounded-2xl p-stack-lg border border-surface-border overflow-hidden hover:border-primary/50 transition-all duration-300">
+<div class="absolute top-0 right-0 w-32 h-32 bg-violet-accent/5 rounded-full -translate-y-16 translate-x-16 blur-2xl group-hover:bg-violet-accent/10 transition-colors"></div>
+<span class="material-symbols-outlined text-violet-accent text-4xl mb-6 block">smart_toy</span>
+<h3 class="font-headline-md text-headline-md mb-4">AI Agents</h3>
+<p class="text-on-surface-variant mb-6">Deploy autonomous agents that can research, plan, and execute tasks across multiple platforms without supervision.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">OpenAI</span>
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">Claude</span>
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">Autogen</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group relative bg-off-white rounded-2xl p-stack-lg border border-surface-border overflow-hidden hover:border-primary/50 transition-all duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block">integration_instructions</span>
+<h3 class="font-headline-md text-headline-md mb-4">System Integrations</h3>
+<p class="text-on-surface-variant mb-6">Legacy software or modern SaaS—we build the robust bridges needed to share data seamlessly across your company.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">API</span>
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">Webhooks</span>
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">SQL</span>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="group relative bg-off-white rounded-2xl p-stack-lg border border-surface-border overflow-hidden hover:border-primary/50 transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 block">description</span>
+<h3 class="font-headline-md text-headline-md mb-4">Document Intelligence</h3>
+<p class="text-on-surface-variant mb-6">Extract insights, summarize long contracts, and categorize invoices automatically using high-accuracy OCR and LLMs.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">RAG</span>
+<span class="bg-white px-3 py-1 rounded-full text-label-sm border border-surface-border">Vector DB</span>
+</div>
+</div>
+<!-- Service Card 5 -->
+<div class="group relative bg-off-white rounded-2xl p-stack-lg border border-surface-border overflow-hidden hover:border-primary/50 transition-all duration-300 lg:col-span-2">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-1">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6 block">terminal</span>
+<h3 class="font-headline-md text-headline-md mb-4">Custom Software</h3>
+<p class="text-on-surface-variant mb-6">Sometimes "no-code" isn't enough. We build custom dashboards, specialized tools, and internal platforms that work exactly how you do.</p>
+<a class="text-primary font-label-md inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#audit">Discuss your project <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="flex-1 grid grid-cols-2 gap-4">
+<div class="bg-white p-4 rounded-xl border border-surface-border/50 text-center">
+<div class="text-2xl font-bold text-on-surface">99.9%</div>
+<div class="text-label-sm text-on-surface-variant">Uptime SLA</div>
+</div>
+<div class="bg-white p-4 rounded-xl border border-surface-border/50 text-center">
+<div class="text-2xl font-bold text-on-surface">300+</div>
+<div class="text-label-sm text-on-surface-variant">Apps Linked</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Bento Grid -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="solutions">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Solutions for everyday business operations</h2>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Use Case 1 -->
+<div class="bg-white p-6 rounded-xl border border-surface-border flex gap-4 items-start shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">person_add</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-1">Lead Management</h4>
+<p class="text-body-md text-on-surface-variant">Auto-score leads, enrich data from social, and sync directly to your CRM.</p>
+</div>
+</div>
+<!-- Use Case 2 -->
+<div class="bg-white p-6 rounded-xl border border-surface-border flex gap-4 items-start shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-violet-accent/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-violet-accent">mail_lock</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-1">Email Intelligence</h4>
+<p class="text-body-md text-on-surface-variant">AI reads your inbox, drafts responses, and triages urgent support tickets.</p>
+</div>
+</div>
+<!-- Use Case 3 -->
+<div class="bg-white p-6 rounded-xl border border-surface-border flex gap-4 items-start shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">payments</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-1">Finance &amp; Billing</h4>
+<p class="text-body-md text-on-surface-variant">Automated invoice generation, payment reminders, and expense reconciliation.</p>
+</div>
+</div>
+<!-- Use Case 4 -->
+<div class="bg-white p-6 rounded-xl border border-surface-border flex gap-4 items-start shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary">groups</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-1">Team Operations</h4>
+<p class="text-body-md text-on-surface-variant">Onboarding workflows, automated status reports, and meeting summaries.</p>
+</div>
+</div>
+<!-- Use Case 5 -->
+<div class="bg-white p-6 rounded-xl border border-surface-border flex gap-4 items-start shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-1">Marketing Reporting</h4>
+<p class="text-body-md text-on-surface-variant">Aggregate data from 5+ platforms into one automated weekly Slack report.</p>
+</div>
+</div>
+<!-- Use Case 6 -->
+<div class="bg-white p-6 rounded-xl border border-surface-border flex gap-4 items-start shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">inventory</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-1">Supply Chain</h4>
+<p class="text-body-md text-on-surface-variant">Track inventory levels across tools and auto-order from suppliers when low.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Automation Deep Dive -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-white overflow-hidden" id="work">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-stack-md">
+<span class="text-primary font-label-md uppercase tracking-widest text-label-sm">Case Study</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Never miss an important email again.</h2>
+<p class="font-body-lg text-on-surface-variant">We built a system that filters through thousands of emails to find high-value leads and sends them directly to a mobile app for instant response.</p>
+<div class="space-y-6 pt-4">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm shrink-0">1</div>
+<p class="text-on-surface-variant"><strong class="text-on-surface">Capture:</strong> Monitors Gmail or Outlook in real-time for new inquiries.</p>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm shrink-0">2</div>
+<p class="text-on-surface-variant"><strong class="text-on-surface">Analyze:</strong> AI classifies intent, sentiment, and budget potential in milliseconds.</p>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm shrink-0">3</div>
+<p class="text-on-surface-variant"><strong class="text-on-surface">Distribute:</strong> High-priority leads are pushed to Telegram; others categorized in CRM.</p>
+</div>
+</div>
+</div>
+<div class="relative bg-dark-navy rounded-3xl p-stack-lg shadow-2xl">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-primary to-violet-accent px-6 py-2 rounded-full text-on-primary font-label-md">
+                        Active Workflow
+                    </div>
+<div class="space-y-8 relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-white/10 rounded-lg"><span class="material-symbols-outlined text-white">mail</span></div>
+<span class="text-white text-label-md">Gmail Inbox</span>
+</div>
+<span class="material-symbols-outlined text-surface-variant">chevron_right</span>
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/20 rounded-lg border border-primary/50"><span class="material-symbols-outlined text-primary-fixed">psychology</span></div>
+<span class="text-white text-label-md">AI Intelligence</span>
+</div>
+</div>
+<div class="bg-white/5 rounded-xl p-6 border border-white/10 space-y-4">
+<div class="flex justify-between items-center pb-4 border-b border-white/5">
+<span class="text-surface-variant text-label-sm uppercase">Outcome Stats</span>
+<span class="text-primary-fixed text-label-sm font-bold">LATEST RUN: SUCCESS</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<div class="text-2xl font-bold text-white">85%</div>
+<div class="text-surface-variant text-xs">Response Speed Increase</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-white">0</div>
+<div class="text-surface-variant text-xs">Missed High-Value Leads</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3">
+<span class="text-white text-label-md">Telegram Alert</span>
+<div class="p-2 bg-secondary-container/20 rounded-lg"><span class="material-symbols-outlined text-secondary-container">send</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-dark-navy text-on-primary" id="process">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-20 text-center">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">From manual process to working automation</h2>
+<p class="font-body-lg text-surface-variant mt-4">A proven engineering framework for reliable systems.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="relative grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Progress Line -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 backdrop-blur-md group hover:border-primary transition-all">
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors">search</span>
+<div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-xs font-bold">01</div>
+</div>
+<h3 class="font-headline-md mb-2">Discover</h3>
+<p class="text-surface-variant text-body-md">We map your current manual workflows and identify the high-impact automation opportunities.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 backdrop-blur-md group hover:border-violet-accent transition-all">
+<span class="material-symbols-outlined text-3xl group-hover:text-violet-accent transition-colors">architecture</span>
+<div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-violet-accent flex items-center justify-center text-xs font-bold">02</div>
+</div>
+<h3 class="font-headline-md mb-2">Design</h3>
+<p class="text-surface-variant text-body-md">We architect the system, choosing the right AI models and integration tools for your specific needs.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 backdrop-blur-md group hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-3xl group-hover:text-secondary transition-colors">precision_manufacturing</span>
+<div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-xs font-bold">03</div>
+</div>
+<h3 class="font-headline-md mb-2">Build</h3>
+<p class="text-surface-variant text-body-md">Our engineers develop the automation, integrate the tools, and perform rigorous testing.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 backdrop-blur-md group hover:border-tertiary transition-all">
+<span class="material-symbols-outlined text-3xl group-hover:text-tertiary transition-colors">trending_up</span>
+<div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-tertiary flex items-center justify-center text-xs font-bold">04</div>
+</div>
+<h3 class="font-headline-md mb-2">Improve</h3>
+<p class="text-surface-variant text-body-md">We monitor the logs, refine the AI logic, and scale the system as your business grows.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why ElvaMind Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-16 text-center">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Built for practical business outcomes</h2>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="bg-light-grey p-6 rounded-2xl border border-surface-border hover:bg-white hover:shadow-xl transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl">task_alt</span>
+<h4 class="font-label-md mb-2">Practical</h4>
+<p class="text-sm text-on-surface-variant">We focus on ROI, not just hype. Every automation must save time or make money.</p>
+</div>
+<div class="bg-light-grey p-6 rounded-2xl border border-surface-border hover:bg-white hover:shadow-xl transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl">add_moderator</span>
+<h4 class="font-label-md mb-2">Automation+</h4>
+<p class="text-sm text-on-surface-variant">AI-enhanced logic that handles nuance, not just simple 'if-this-then-that' rules.</p>
+</div>
+<div class="bg-light-grey p-6 rounded-2xl border border-surface-border hover:bg-white hover:shadow-xl transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl">cloud_off</span>
+<h4 class="font-label-md mb-2">Tech-independent</h4>
+<p class="text-sm text-on-surface-variant">We use whatever tool is best for your job. No vendor lock-in, just results.</p>
+</div>
+<div class="bg-light-grey p-6 rounded-2xl border border-surface-border hover:bg-white hover:shadow-xl transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl">verified</span>
+<h4 class="font-label-md mb-2">Reliable</h4>
+<p class="text-sm text-on-surface-variant">Enterprise-grade error handling and monitoring built into every workflow.</p>
+</div>
+<div class="bg-light-grey p-6 rounded-2xl border border-surface-border hover:bg-white hover:shadow-xl transition-all group">
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl">bolt</span>
+<h4 class="font-label-md mb-2">Fast</h4>
+<p class="text-sm text-on-surface-variant">Agile deployment. Get your first automated workflow running in weeks, not months.</p>
+</div>
+</div>
+</section>
+<!-- Founder Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-off-white border-y border-surface-border" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/3 relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of Arun Jaiswal, an experienced software engineer, in a bright modern office setting. He is wearing a dark navy polo shirt and has a friendly, confident expression. The lighting is soft and high-key, with a blurred background showing tech equipment and greenery, reflecting a premium corporate but approachable vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEth9DbXc99wznYUCpPnRmdC4jAwrmxTAGwpQkaux4dT047eozUCO6Absg_aOW3dnfZPYZZWpWQJrmrou4k9NV6DJttBwQSDhm0aCj9_6bKxU2dkGEt1KqUQyIHDObHolvgqBLCJE8tqIiuBW73fK8-umtH9cYBwyjxOkorXC1py6m8B_9Ap1BhjHyyiBVRd18ay3E18rbKXO1V80_Uc0ZtdpbpVoYqrK-5R1z69lmUlT9PwLeSNteFMGZ5O_iugV5CBOncRnytmGq"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl -z-10"></div>
+</div>
+<div class="flex-1 space-y-stack-md">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Built by an experienced software engineer</h2>
+<h3 class="font-headline-md text-primary">Arun Jaiswal</h3>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                        With over 8 years of experience building mission-critical software systems, Arun founded ElvaMind to help non-technical businesses leverage the power of enterprise-grade AI. We don't just "set up" tools; we engineer robust business systems that scale.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="flex items-center gap-2 px-6 py-3 bg-white border border-surface-border rounded-xl font-label-md hover:bg-primary hover:text-white hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined">link</span> LinkedIn Profile
+                        </a>
+<a class="flex items-center gap-2 px-6 py-3 bg-dark-navy text-on-primary rounded-xl font-label-md hover:opacity-90 transition-all" href="#audit">
+<span class="material-symbols-outlined">calendar_today</span> Schedule a Consultation
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Audit Form Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-dark-navy relative overflow-hidden" id="audit">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,rgba(79,70,229,0.15),transparent_70%)]"></div>
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter relative z-10">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-4">Request a Free Automation Audit</h2>
+<p class="text-surface-variant">Tell us about your biggest operational bottleneck and we'll show you how AI can solve it.</p>
+</div>
+<form class="space-y-6 bg-white/5 p-stack-lg rounded-3xl border border-white/10 backdrop-blur-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-label-sm text-surface-variant">Full Name</label>
+<input class="w-full h-12 bg-white/5 border border-white/10 rounded-lg px-4 text-on-primary focus:ring-primary focus:border-primary transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm text-surface-variant">Business Email</label>
+<input class="w-full h-12 bg-white/5 border border-white/10 rounded-lg px-4 text-on-primary focus:ring-primary focus:border-primary transition-all" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-label-sm text-surface-variant">Company Name</label>
+<input class="w-full h-12 bg-white/5 border border-white/10 rounded-lg px-4 text-on-primary focus:ring-primary focus:border-primary transition-all" placeholder="Acme Inc." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm text-surface-variant">Phone Number</label>
+<input class="w-full h-12 bg-white/5 border border-white/10 rounded-lg px-4 text-on-primary focus:ring-primary focus:border-primary transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm text-surface-variant">Which process do you want to automate?</label>
+<textarea class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-on-primary focus:ring-primary focus:border-primary transition-all" placeholder="e.g. Lead processing from my website to CRM..." rows="4"></textarea>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm text-surface-variant">Preferred Contact Method</label>
+<div class="flex gap-4">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-primary focus:ring-primary bg-transparent border-white/20" name="contact" type="radio"/>
+<span class="text-on-primary text-sm">Email</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-primary focus:ring-primary bg-transparent border-white/20" name="contact" type="radio"/>
+<span class="text-on-primary text-sm">WhatsApp</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-primary focus:ring-primary bg-transparent border-white/20" name="contact" type="radio"/>
+<span class="text-on-primary text-sm">Zoom Call</span>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-md hover:opacity-90 active:scale-[0.98] transition-all mt-4" type="submit">
+                    Request Free Automation Audit
+                </button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-dark-navy pt-section-padding-mobile md:pt-section-padding-desktop border-t border-surface-border/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg">
+<div class="space-y-6">
+<a class="flex items-center gap-2" href="#">
+<img alt="ElvaMind Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp_hgRQJZifkDAAxCchl2tIHFYJoNKhXiqsCSCSNRhaQI_jzOQBFDvZS4jN88-ppR3447BJy1U60rxJv3naeWfV-XNwl7Ab8WU_NRpxQq62lhK2P2EfjYH-BU9o9ehI_w1Z8C-dB_ZfCt-Xv_k_vuOLdHNjHdmmjZkBJxZE244Nbixg3TrR1cU3DFp01UJHCZu166z9fUC39oVgvQS7TjYCbcDxlEV8gFCX_OBMvR4a6JAVL_CajwD9gTeh8U8oj96qCxDNkGfp2HZ"/>
+<span class="font-display-lg text-headline-md font-bold text-on-primary">ElvaMind</span>
+</a>
+<p class="text-surface-variant text-sm">
+                        Engineering AI-driven business operations for the modern enterprise.
+                    </p>
+<div class="flex gap-4">
+<a class="text-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-on-primary mb-6">Links</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#solutions">Solutions</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#work">Work</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#process">Process</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-primary mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#about">About</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-primary mb-6">Get in Touch</h4>
+<p class="text-surface-variant text-sm mb-4">Ready to automate your operations?</p>
+<a class="text-primary font-bold block mb-2" href="mailto:hello@elvamind.com">hello@elvamind.com</a>
+<a class="text-surface-variant text-sm flex items-center gap-2" href="#"><span class="material-symbols-outlined text-sm">chat</span> WhatsApp: +1 234 567 890</a>
+</div>
+</div>
+</div>
+<div class="border-t border-surface-border/10 py-8">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-center gap-4 text-surface-variant text-sm">
+<span>© 2026 ElvaMind. All rights reserved.</span>
+<div class="flex gap-8">
+<span>London, UK</span>
+<span>Delaware, US</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95 z-50" href="#">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.538-2.961-2.654-.087-.116-.708-.941-.708-1.792 0-.85.445-1.267.603-1.442.159-.175.348-.218.463-.218.115 0 .231.001.332.005.109.004.258-.041.404.311.145.352.492 1.201.535 1.29.044.088.072.19.014.308-.058.116-.087.19-.173.29-.087.1-.184.223-.263.3-.089.087-.183.181-.079.359.103.178.459.757.984 1.225.676.602 1.244.788 1.423.874.179.086.284.072.39-.051.107-.123.454-.528.577-.709.123-.182.247-.153.415-.091.17.062 1.071.505 1.258.599.187.094.313.142.358.22.046.078.046.452-.098.857z"></path>
+</svg>
+</a>
+<script>
+        // Simple micro-interactions and scroll tracking
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

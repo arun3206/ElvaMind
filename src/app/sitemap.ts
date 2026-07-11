@@ -1,0 +1,1 @@
+import type {MetadataRoute} from "next";import {siteConfig} from "@/config/site";export default function sitemap():MetadataRoute.Sitemap{return ["","/privacy","/terms"].map(path=>({url:`${siteConfig.brand.domain}${path}`,lastModified:new Date(),changeFrequency:(path?"yearly":"monthly") as "yearly"|"monthly",priority:path?0.4:1}))}

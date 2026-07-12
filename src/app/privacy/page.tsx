@@ -1,1 +1,13 @@
-import {siteConfig} from "@/config/site";import {LegalPage} from "@/components/LegalPage";export const metadata={title:"Privacy Policy | ElvaMind",description:"ElvaMind privacy policy."};export default function Privacy(){return <LegalPage title="Privacy Policy" updated={siteConfig.legal.privacyUpdated}><p>This placeholder explains how ElvaMind may collect and use information submitted through this website.</p><h2>Information we collect</h2><p>We may collect contact details and information voluntarily provided through the audit form, along with basic technical information needed to operate and secure the website.</p><h2>How information is used</h2><p>Information may be used to respond to enquiries, provide requested services, improve the website, and meet legal obligations. We do not sell personal information.</p><h2>Contact</h2><p>For privacy questions, email <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>.</p></LegalPage>}
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+import { LegalPage } from "@/components/LegalPage";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy information for the ElvaMind AI automation consultancy website.",
+  alternates: { canonical: "/privacy" },
+};
+
+export default function Privacy() {
+  return <LegalPage title="Privacy Policy" updated={siteConfig.legal.privacyUpdated}><p>This placeholder explains how ElvaMind may collect and use information submitted through this website.</p><h2>Information we collect</h2><p>We may collect contact details and information voluntarily provided through the audit form, along with basic technical information needed to operate and secure the website.</p><h2>How information is used</h2><p>Information may be used to respond to enquiries, provide requested services, improve the website, and meet legal obligations. We do not sell personal information.</p><h2>Contact</h2><p>For privacy questions, email <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>.</p></LegalPage>;
+}

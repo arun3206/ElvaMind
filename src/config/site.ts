@@ -24,6 +24,21 @@ export const siteConfig = {
   solutions:["Lead management","Email intelligence","Approval workflows","Recruitment automation","Document processing","Automated reporting"],
   process:[{title:"Discover",description:"Map the process, bottlenecks, and desired outcome."},{title:"Design",description:"Create a practical solution around your existing tools."},{title:"Build",description:"Implement, integrate, test, and train your team."},{title:"Improve",description:"Measure performance and refine as your needs evolve."}],
   reasons:["Practical, not theoretical","Automation plus custom development","Technology-independent","Built for reliability","Fast execution"],
+  seo: {
+    title: "ElvaMind | AI Automation, AI Agents & Custom Software",
+    description: "ElvaMind helps businesses automate repetitive work, connect tools, build AI agents, process documents, and create reliable custom software.",
+    keywords: ["AI automation consultancy", "AI workflow automation", "AI agents for business", "business process automation", "system integrations", "document intelligence", "custom software development", "AI consultant India"],
+    serviceArea: "India and remote clients worldwide",
+    language: "en-IN"
+  },
+  faq: [
+    {question:"What does ElvaMind automate?",answer:"ElvaMind automates repetitive business operations such as lead routing, email classification, approvals, recruitment tasks, document processing, reporting, and data movement between business tools."},
+    {question:"Can ElvaMind connect our existing software?",answer:"Yes. ElvaMind builds integrations between email, CRMs, spreadsheets, messaging applications, internal systems, and third-party APIs so information moves reliably without repeated manual entry."},
+    {question:"Does ElvaMind build AI agents and custom software?",answer:"Yes. ElvaMind designs practical AI agents, internal tools, portals, dashboards, and custom applications when off-the-shelf automation alone cannot solve the operational requirement."},
+    {question:"How does an automation project start?",answer:"Projects begin with a discovery session to map the current process, bottlenecks, tools, risks, and desired outcome. ElvaMind then proposes a focused design before implementation."},
+    {question:"Who is behind ElvaMind?",answer:"ElvaMind was founded by Arun Jaiswal, an AI automation consultant and software engineer with more than nine years of experience building enterprise applications, integrations, and digital solutions."},
+    {question:"Where does ElvaMind work with clients?",answer:"ElvaMind is based in India and can work remotely with businesses worldwide."}
+  ],
   legal:{ privacyUpdated:"11 July 2026", termsUpdated:"11 July 2026" }
 } as const;
 

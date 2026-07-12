@@ -1,0 +1,51 @@
+# ElvaMind
+
+> ElvaMind is an AI automation consultancy founded by Arun Jaiswal. It helps businesses automate repetitive work, connect disconnected software, build practical AI agents, process documents, and create custom operational software.
+
+Canonical website: https://elvamind.com
+Primary language: English
+Based in: India
+Service availability: India and remote clients worldwide
+Founder: Arun Jaiswal
+Contact: arunjaiswal139@gmail.com
+
+## Core services
+
+- AI Workflow Automation: reliable multi-step workflows that reduce repetitive operational work.
+- AI Agents: purpose-built agents that understand context, use tools, and keep people in control.
+- System Integrations: connections between email, CRM, spreadsheets, messaging applications, internal systems, and APIs.
+- Document Intelligence: extraction, classification, summarization, and routing for business documents and messages.
+- Custom Software: focused internal tools, portals, dashboards, and customer-facing applications.
+
+## Common operational solutions
+
+- Lead management and routing
+- Email classification and prioritization
+- Approval workflows
+- Recruitment automation
+- Document processing
+- Automated reporting
+
+## Delivery process
+
+1. Discover the current process, bottlenecks, tools, and desired outcome.
+2. Design a practical solution around the business's existing systems.
+3. Build, integrate, test, and train the team.
+4. Improve the automation as operational needs evolve.
+
+## Founder
+
+Arun Jaiswal is an AI automation consultant and software engineer with more than nine years of experience building enterprise applications, integrations, and digital solutions.
+
+## Important pages
+
+- Homepage: https://elvamind.com/
+- Privacy policy: https://elvamind.com/privacy
+- Terms of service: https://elvamind.com/terms
+- Sitemap: https://elvamind.com/sitemap.xml
+
+## Contact
+
+Email: arunjaiswal139@gmail.com
+LinkedIn: https://www.linkedin.com/in/arun-jaiswal-5a8705108/
+
